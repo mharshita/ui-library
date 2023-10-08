@@ -17,6 +17,16 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
+function isValid(str) {
+  str = str.trim();
+
+  if (str.length > 0) {
+    return true;
+  }
+
+  return false;
+}
+
 function PaperComponent(props) {
   return (
     <Draggable
@@ -28,7 +38,7 @@ function PaperComponent(props) {
   );
 }
 
-const CustomModal = ({ open, handleClose, header, content }) => {
+const CustomModal = ({ open, handleClose, header, content, buttonText }) => {
   return (
     <ThemeProvider theme={CustomLightTheme}>
       <CssBaseline />
@@ -46,11 +56,15 @@ const CustomModal = ({ open, handleClose, header, content }) => {
             {content}
           </DialogContentText>
         </DialogContent>
-        <DialogActions>
-          <Button autoFocus onClick={handleClose}>
-            Cancel
-          </Button>
-        </DialogActions>
+        {isValid(buttonText) ? (
+          <DialogActions>
+            <Button autoFocus onClick={handleClose}>
+              {buttonText}
+            </Button>
+          </DialogActions>
+        ) : (
+          ""
+        )}
       </Dialog>
     </ThemeProvider>
   );
@@ -61,6 +75,7 @@ CustomModal.propTypes = {
   handleClose: PropTypes.func,
   header: PropTypes.string,
   content: PropTypes.string,
+  buttonText: PropTypes.string,
 };
 
 export default CustomModal;

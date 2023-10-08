@@ -13,5 +13,6 @@ Modal.args = {
   open: true,
   header: "Modal Header",
   content:
-    "This is a draggable modal. The content of the modal will appear here. This is a draggable modal. The content of the modal will appear here.",
+    "This is a draggable modal. The content of the modal will appear here.",
+  buttonText: "Cancel",
 };
