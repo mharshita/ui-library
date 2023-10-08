@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import CircularProgress from "@mui/material/CircularProgress";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import CustomLightTheme from "../Theme";
+import CustomLightTheme from "./Theme";
 import PropTypes from "prop-types";
 
 const CustomButton = ({ text, color, isLoading, onClick, fullWidth, size }) => {
