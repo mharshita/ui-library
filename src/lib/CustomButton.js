@@ -3,17 +3,17 @@ import Button from "@mui/material/Button";
 import CircularProgress from "@mui/material/CircularProgress";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import CustomLightTheme from "./Theme";
+import { customTheme } from "./Theme";
 import PropTypes from "prop-types";
 
 const CustomButton = ({ text, color, isLoading, onClick, fullWidth, size }) => {
   return (
-    <ThemeProvider theme={CustomLightTheme}>
+    <ThemeProvider theme={customTheme}>
       <CssBaseline />
       <Button
         color={color}
         variant="contained"
-        disableElevation="true"
+        disableElevation={true}
         onClick={onClick}
         fullWidth={fullWidth}
         size={size}

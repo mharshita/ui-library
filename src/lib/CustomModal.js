@@ -7,7 +7,7 @@ import DialogActions from "@mui/material/DialogActions";
 import Slide from "@mui/material/Slide";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import CustomLightTheme from "./Theme";
+import { customTheme } from "./Theme";
 import PropTypes from "prop-types";
 import Draggable from "react-draggable";
 import Paper from "@mui/material/Paper";
@@ -40,7 +40,7 @@ function PaperComponent(props) {
 
 const CustomModal = ({ open, handleClose, header, content, buttonText }) => {
   return (
-    <ThemeProvider theme={CustomLightTheme}>
+    <ThemeProvider theme={customTheme}>
       <CssBaseline />
       <Dialog
         open={open}

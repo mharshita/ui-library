@@ -4,12 +4,12 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import CustomLightTheme from "./Theme";
+import { customTheme } from "./Theme";
 import PropTypes from "prop-types";
 
 const CustomCard = ({ header, content, footer, variant }) => {
   return (
-    <ThemeProvider theme={CustomLightTheme}>
+    <ThemeProvider theme={customTheme}>
       <CssBaseline />
       <Card
         raised={variant === "elevated" ? true : false}

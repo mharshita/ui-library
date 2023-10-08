@@ -3,7 +3,9 @@ import { createTheme, alpha } from "@mui/material/styles";
 const violetBase = "#7F00FF";
 const blueBase = "#1a98ec";
 
-const CustomLightTheme = createTheme({
+let theme = "light";
+
+export const customTheme = createTheme({
   components: {
     MuiButton: {
       styleOverrides: {
@@ -21,7 +23,7 @@ const CustomLightTheme = createTheme({
     },
   },
   palette: {
-    contrastThreshold: 1,
+    mode: theme,
     primary: {
       main: alpha(blueBase, 0.7),
       light: alpha(blueBase, 0.5),
@@ -44,5 +46,3 @@ const CustomLightTheme = createTheme({
     fontSize: 16,
   },
 });
-
-export default CustomLightTheme;
