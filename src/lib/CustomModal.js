@@ -56,7 +56,7 @@ const CustomModal = ({ open, handleClose, header, content, buttonText }) => {
             {content}
           </DialogContentText>
         </DialogContent>
-        {isValid(buttonText) ? (
+        {buttonText && isValid(buttonText) ? (
           <DialogActions>
             <Button autoFocus onClick={handleClose}>
               {buttonText}
