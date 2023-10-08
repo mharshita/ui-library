@@ -1,4 +1,4 @@
-import CustomModal from "../components/CustomModal.js";
+import CustomModal from "../lib/CustomModal.js";
 
 export default {
   title: "Components/Modal",

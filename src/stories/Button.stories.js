@@ -1,4 +1,4 @@
-import CustomButton from "../components/CustomButton.js";
+import CustomButton from "../lib/CustomButton.js";
 
 export default {
   title: "Components/Button",

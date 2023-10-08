@@ -1,4 +1,4 @@
-import CustomCard from "../components/CustomCard";
+import CustomCard from "../lib/CustomCard";
 
 export default {
   title: "Components/Card",
